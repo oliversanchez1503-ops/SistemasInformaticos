@@ -1,0 +1,6 @@
+Get-Process| Where-Object ProcessName -EQ "svchost" | Select-Object ProcessName, Id
+Get-Process| Where-Object handles -gt "200" | Select-Object ProcessName, handles
+Get-Process| Where-Object handles -lt "50" | Select-Object ProcessName, handles 
+Get-Process | Sort-Object CPU -Descending | Select-Object -first 3 
+Get-Process | Sort-Object ID -Descending | Select-Object ProcessName, Id -first 1
+Get-Process | Group-Object ProcessName
