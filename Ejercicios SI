@@ -1,4 +1,6 @@
+*Ejercicio 1: Listar todos los procesos cuyo nombre sea exactamente "svchost". Solo queremos ver el ID y el Nombre.
 Get-Process| Where-Object ProcessName -EQ "svchost" | Select-Object ProcessName, Id
+*Ejercicio 2: Mostrar todos los procesos que tengan más de 200 Handles (manejadores).
 Get-Process| Where-Object handles -gt "200" | Select-Object ProcessName, handles
 Get-Process| Where-Object handles -lt "50" | Select-Object ProcessName, handles 
 Get-Process | Sort-Object CPU -Descending | Select-Object -first 3 
